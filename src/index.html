@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BegOn</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Scroll Animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- ==================== -->
+      <!-- navigation -->
+      <!-- ==================== -->
+
+      <div class="navigation">
+        <div class="navigation__logo">BegOn</div>
+        <input type="checkbox" class="navigation__checkbox" id="toggle" />
+        <label class="navigation__button" for="toggle">
+          <span class="navigation__icon"></span>
+        </label>
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#delivery" class="navigation__link">Delivery</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#service" class="navigation__link">Service</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#subscribe" class="navigation__link">Newsletter</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#footer" class="navigation__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ==================== -->
+      <!-- header -->
+      <!-- ==================== -->
+      <header id="home" class="header">
+        <div class="header__info">
+          <h1>Delivery of Packages as Fast as Flash</h1>
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Provident
+            recusandae
+          </h4>
+
+          <div class="header__trackingbox">
+            <input
+              class="header__tracking"
+              type="text"
+              name="tracking"
+              id="tracking"
+              placeholder="Enter Your Tracking ID"
+            />
+            <button class="btnb btnb--tracking">Go</button>
+          </div>
+        </div>
+        <div
+          class="header__imgbox"
+          data-aos="fade-left"
+          data-aos-offset="0"
+          data-aos-delay="1000"
+        >
+          <img
+            class="header__image"
+            src="images/header.png"
+            alt="delivery boy"
+          />
+          <hr />
+          <hr />
+        </div>
+      </header>
+
+      <!-- ==================== -->
+      <!-- delivery -->
+      <!-- ==================== -->
+
+      <section id="delivery" class="delivery">
+        <div class="delivery__heading" data-aos="fade-up">
+          <h2>The Best Delivery For Our Customers</h2>
+          <hr />
+        </div>
+        <div class="delivery__option">
+          <div class="delivery__option--regular" data-aos="zoom-in-up">
+            <img src="images/regular.png" alt="regular delivery" />
+            <h3>Reguler</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              fugiat eligendi deleniti consectetur, quam quidem?
+            </p>
+          </div>
+          <div class="delivery__option--express" data-aos="zoom-in-up">
+            <img src="images/express.png" alt="express delivery" />
+            <h3>Express</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              fugiat eligendi deleniti consectetur, quam quidem?
+            </p>
+          </div>
+          <div class="delivery__option--light" data-aos="zoom-in-up">
+            <img src="images/light.png" alt="light delivery" />
+            <h3>Lighting</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              fugiat eligendi deleniti consectetur, quam quidem?
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== -->
+      <!-- service -->
+      <!-- ==================== -->
+
+      <section id="service" class="service">
+        <img
+          class="service__image"
+          src="images/home.png"
+          alt="home delivery"
+          data-aos="zoom-in"
+        />
+        <div class="service__info" data-aos="zoom-in">
+          <div class="service__heading">
+            <h2>Delivered to Your House On Time and Good Packing</h2>
+            <hr />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+            debitis? Illo excepturi, porro mollitia dolores eaque possimus
+            quisquam, earum iste, fugiat aspernatur id rem odio dicta atque eum
+            qui cumque. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit.
+          </p>
+        </div>
+      </section>
+      <section id="service2" class="service">
+        <div class="service__info" data-aos="zoom-in">
+          <div class="service__heading">
+            <h2>Delivered as Fast As Batman</h2>
+            <hr />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+            debitis? Illo excepturi, porro mollitia dolores eaque possimus
+            quisquam, earum iste, fugiat aspernatur id rem odio dicta atque eum
+            qui cumque. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit.
+          </p>
+        </div>
+        <img
+          class="service__image"
+          src="images/fast.png"
+          alt="fast delivery"
+          data-aos="zoom-in"
+        />
+      </section>
+      <!-- ==================== -->
+      <!-- subscribe -->
+      <!-- ==================== -->
+      <section id="subscribe" class="subscribe">
+        <div class="subscribe__info" data-aos="fade-up">
+          <h1 class="subscribe__heading">Subscribe to our Newsletter</h1>
+          <h4 class="subscribe__paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut sed
+            hic iste praesentium consectetur adipisci dolorum sint ducimus
+            aliquid?
+          </h4>
+        </div>
+        <form action="" data-aos="fade-up">
+          <input
+            class="subscribe__email"
+            type="email"
+            name="email"
+            placeholder="Enter Your Email Address"
+          />
+          <button class="subscribe__btnb" type="button">Submit</button>
+        </form>
+      </section>
+      <!-- ==================== -->
+      <!-- footer -->
+      <!-- ==================== -->
+      <footer id="footer" class="footer">
+        <div class="footer__info" data-aos="fade-up" data-aos-offset="0">
+          <div class="footer__icon">
+            <h1 class="footer__logo">BegOn</h1>
+            <div class="footer__icon-social">
+              <ion-icon name="logo-twitter"></ion-icon>
+              <ion-icon name="logo-google"></ion-icon>
+              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </div>
+            <p>Lorem ipsum dolors</p>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>-91 114 028 218</p>
+          </div>
+
+          <ul class="footer__nav" data-aos="fade-up" data-aos-offset="0">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#delivery" class="nav__link">Delivery</a>
+            </li>
+            <li class="nav__item">
+              <a href="#service" class="nav__link">Service</a>
+            </li>
+            <li class="nav__item">
+              <a href="#subscribe" class="nav__link">Newsletter</a>
+            </li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__copyright">Copyright &copy; 2021 by Michael Diyora</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 2000,
+      });
+    </script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

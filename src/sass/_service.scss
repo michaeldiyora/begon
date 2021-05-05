@@ -1,0 +1,35 @@
+// =============================
+// 3 service
+// ==============================
+.service {
+  grid-column: f-s/f-e;
+  padding: 5rem 10rem;
+  @include grid;
+  @include respond(mobile) {
+    padding: 5rem 3rem;
+    text-align: center;
+  }
+  &__image {
+    width: 100%;
+    @include respond(tab-small) {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+    }
+  }
+  &__info {
+    @include respond(tab-small) {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
+  }
+  &__heading {
+    @include respond(tab-small) {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+}

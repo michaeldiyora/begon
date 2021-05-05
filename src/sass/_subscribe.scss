@@ -1,0 +1,43 @@
+// =============================
+// 6 subscribe
+// ==============================
+.subscribe {
+  grid-column: f-s/f-e;
+  padding: 10rem;
+  background-color: $color-primary-dark;
+  color: $color-font-light;
+  text-align: center;
+  @include respond(mobile) {
+    padding: 10rem 3rem;
+  }
+  &__info {
+    width: 90%;
+    margin: 0 auto;
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+  &__email {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+  &__btnb {
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    @include btn($color-font-dark, $color-font-light);
+    &:hover {
+      transform: translateY(-0.3rem);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

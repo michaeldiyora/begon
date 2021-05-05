@@ -1,0 +1,284 @@
+// ====================
+// 1 navigation
+// ====================
+.navigation {
+  grid-column: f-s/f-e;
+  @include flex(space-between);
+  color: $color-font-dark;
+
+  padding: 2rem 5rem;
+  @include respond(tab-small) {
+    display: block;
+    height: 8rem;
+    z-index: 10;
+    padding: 1rem 0;
+  }
+  &__logo {
+    font-size: 4rem;
+    font-weight: 700;
+    @include respond(tab-small) {
+      padding-left: 5rem;
+    }
+    @include respond(tab-small) {
+      padding-left: 2rem;
+    }
+  }
+  &__nav {
+    width: 60%;
+    @include respond(tab-small) {
+      width: 100%;
+      background-color: rgba($color-font-dark, 0.98);
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.2s ease-in-out;
+      padding: 5rem 0;
+    }
+  }
+  &__list {
+    @include flex(space-between);
+
+    @include respond(tab-small) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    @include respond(tab-small) {
+      margin: 1rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-font-dark;
+      padding: 1rem 2rem;
+      display: inline-block;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-font-dark 50%
+      );
+      background-size: 250%;
+      transition: background-position 0.4s, transform 0.4s,
+        opacity 0.1s ease-in-out;
+      @include respond(tab-small) {
+        color: $color-font-light;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          $color-font-light 50%
+        );
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-font-light;
+      @include respond(tab-small) {
+        color: $color-font-dark;
+      }
+    }
+    @include respond(tab-small) {
+      opacity: 0;
+    }
+  }
+
+  // --------------------
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    display: none;
+    background-color: $color-font-dark;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    text-align: center;
+
+    @include respond(tab-small) {
+      display: block;
+    }
+    @include respond(mobile) {
+      right: 2rem;
+    }
+  }
+  &__icon {
+    display: none;
+
+    margin-top: 2.4rem;
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-font-light;
+
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+  &__checkbox:checked ~ &__nav {
+    transform: scale(1, 1);
+  }
+  &__checkbox:checked ~ &__nav &__list &__item &__link {
+    opacity: 1;
+    transition: background-position 0.4s, transform 0.4s,
+      opacity 0.2s ease-in-out 0.2s;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+//helper class for sticky navigation
+.sticky {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+
+  background-color: rgba($color-font-dark, 0.98);
+  width: 100%;
+  height: 5.4rem;
+  color: $color-font-light;
+  transition: all 2s, color 0s;
+  .navigation {
+    &__button {
+      background-color: $color-font-light;
+    }
+    &__icon {
+      &,
+      &::before,
+      &::after {
+        background-color: $color-font-dark;
+      }
+    }
+    &__link {
+      color: $color-font-light;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-font-light 50%
+      );
+      &:hover {
+        color: $color-font-dark;
+      }
+    }
+  }
+  @include respond(tab-small) {
+    height: 8rem;
+  }
+  // onScroll active link
+  @include respond(normal-pc) {
+    .active {
+      background-color: $color-font-light !important;
+      color: $color-font-dark !important;
+    }
+  }
+}
+
+// ====================
+// 1 header
+// ====================
+.header {
+  grid-column: f-s/s-e;
+  padding: 5rem;
+  @include flex(space-between);
+  color: $color-font-dark;
+  position: relative;
+  @include respond(tab-small) {
+    height: 85vh;
+    justify-content: center;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary-dark, 0.9),
+        rgba($color-primary-light, 0.9)
+      ),
+      url(/src/images/header.png);
+    color: $color-font-light;
+    background-position: center;
+    background-size: cover;
+  }
+  @include respond(mobile) {
+    padding: 5rem 2rem;
+  }
+  &__info {
+    width: 40%;
+    @include respond(tab-small) {
+      width: 80%;
+    }
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+  &__trackingbox {
+    position: relative;
+  }
+  &__tracking {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.5rem;
+    outline: none;
+    font-size: 2rem;
+    border: 2px solid $color-primary-light;
+    border-radius: 50px;
+    background-color: $color-bg;
+  }
+
+  .btnb--tracking {
+    padding: 1.3rem 4rem;
+    border-radius: 50px;
+    position: absolute;
+    right: 0.9%;
+    bottom: 5%;
+    &:hover {
+      transform: translateX(-0.3rem);
+    }
+    &:active {
+      transform: translateX(0);
+    }
+    @include respond(mobile) {
+      padding: 1.2rem 2rem;
+      bottom: 7%;
+    }
+  }
+
+  &__imgbox {
+    width: 55%;
+    @include respond(tab-small) {
+      display: none;
+    }
+  }
+  &__image {
+    width: 100%;
+    transform: rotateY(180deg);
+  }
+}

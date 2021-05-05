@@ -1,0 +1,63 @@
+$color-border: hsl(236, 51%, 28%);
+$color-bg: hsl(220, 100%, 98%);
+
+$color-primary-dark: hsl(213, 76%, 48%);
+$color-primary-light: hsl(216, 97%, 62%);
+
+$color-font-dark: hsl(215, 40%, 15%);
+$color-font-light: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // 1rem = 10px --- 10px/16px=62.5%
+
+  font-size: 62.5%; //10px
+  box-sizing: border-box;
+
+  @include respond(tab-big) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include respond(tab-small) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  @include respond(mobile) {
+    // font-size: 37.5%; //1rem = 7px
+  }
+
+  @include respond(big-pc) {
+    font-size: 75%; //1rem = 12px
+  }
+}
+
+body {
+  font-family: 'Roboto', serif, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.7rem;
+  background-color: $color-bg;
+}
+
+::selection {
+  color: white;
+  background-color: $color-primary-dark;
+}
+
+//=====================
+// Layout
+// ====================
+.layout {
+  display: grid;
+  grid-template-columns:
+    [f-s] 1fr[m-s] repeat(8, [col-s] minmax(min-content, 14rem) [col-e])
+    [m-e] 1fr[f-e];
+  grid-template-rows: repeat(7, min-content);
+}

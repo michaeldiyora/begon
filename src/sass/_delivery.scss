@@ -1,0 +1,29 @@
+// =============================
+// 2 delivery
+// ==============================
+.delivery {
+  grid-column: f-s/f-e;
+  padding: 10rem;
+  text-align: center;
+  @include respond(mobile) {
+    padding: 10rem 3rem;
+  }
+  &__heading {
+    width: 50%;
+    margin: 0 auto;
+    @include respond(tab-small) {
+      width: 80%;
+    }
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+  &__option {
+    margin-top: 5rem;
+    @include grid;
+
+    img {
+      width: 100%;
+    }
+  }
+}
