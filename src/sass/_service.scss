@@ -3,12 +3,13 @@
 // ==============================
 .service {
   grid-column: f-s/f-e;
-  padding: 5rem 10rem;
+  padding: 15rem 10rem;
   @include grid;
   @include respond(mobile) {
     padding: 5rem 3rem;
     text-align: center;
   }
+
   &__image {
     width: 100%;
     @include respond(tab-small) {
@@ -30,6 +31,14 @@
     }
     @include respond(mobile) {
       width: 100%;
+    }
+  }
+  &-1-bg {
+    background-color: $color-bg;
+    padding: 5rem 10rem;
+    @include respond(mobile) {
+      padding: 5rem 3rem;
+      text-align: center;
     }
   }
 }

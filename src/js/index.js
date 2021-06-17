@@ -66,14 +66,18 @@ window.addEventListener('scroll', navActive);
 // ====================
 //tracking id
 // ====================
+// only for demo purpose
 const trackingBtn = document.querySelector('.btnb--tracking');
 const trackingID = document.querySelector('#tracking');
 trackingBtn.addEventListener('click', function () {
   const id = '0123456789';
   if (trackingID.value === id) {
     alert('Your parcel is on the way .....');
-  } else {
+    trackingID.value = '';
+  } else if (trackingID.value == '') {
     alert('Please enter your 10 digit tracking id');
+  } else {
+    alert('Wrong tracking id');
   }
 });
 
@@ -81,7 +85,8 @@ trackingBtn.addEventListener('click', function () {
 // email validation
 // ====================
 
-const pattern = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+const pattern =
+  /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
 function validMail(email) {
   if (!email) return false;
@@ -117,6 +122,7 @@ submitBtn.addEventListener('click', function () {
 
   if (isValid) {
     alert('Thank you for subscribe');
+    input.value = '';
   } else if (mail == '') {
     alert('Please enter your email id');
   } else {

@@ -5,6 +5,7 @@
   grid-column: f-s/f-e;
   @include flex(space-between);
   color: $color-font-dark;
+  background-color: $color-bg;
 
   padding: 2rem 5rem;
   @include respond(tab-small) {
@@ -213,6 +214,7 @@
   padding: 5rem;
   @include flex(space-between);
   color: $color-font-dark;
+  background-color: $color-bg;
   position: relative;
   @include respond(tab-small) {
     height: 85vh;

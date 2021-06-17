@@ -79,6 +79,5 @@ exports.default = gulp.series(
   compilesass,
   minifyjs,
   optimizeimg,
-
   watchTask
 );

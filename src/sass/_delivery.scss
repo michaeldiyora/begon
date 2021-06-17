@@ -5,6 +5,7 @@
   grid-column: f-s/f-e;
   padding: 10rem;
   text-align: center;
+
   @include respond(mobile) {
     padding: 10rem 3rem;
   }

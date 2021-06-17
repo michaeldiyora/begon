@@ -1,3 +1,3 @@
 #BegOn project
 
-Courier delivery application with different delivery option.
+Courier delivery application with different options.

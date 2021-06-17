@@ -4,13 +4,15 @@
   "description": "Courier delivery application",
   "default": "index.html",
   "scripts": {
-    "start": "parcel serve public/index.html",
+    "start": "parcel public/index.html",
     "build": "parcel build public/index.html"
   },
   "author": "Michael Diyora",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.0-beta.2",
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
